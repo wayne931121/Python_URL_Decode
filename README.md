@@ -4,7 +4,7 @@ Python URL Decode
 
 The function url_decoder in url_decoder.py
 
-```
+```python
 from url_decode import url_decoder
 
 url = "https://zh.wikipedia.org/zh-tw/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81"
@@ -14,7 +14,7 @@ print(url)
 ## output: https://zh.wikipedia.org/zh-tw/百分号编码
 ```
 
-```
+```python
 def url_decoder(b):
 # https://zh.wikipedia.org/zh-tw/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81
 # %21 mean 21hex, => int("21",16) => 33 => chr(33) => "!", result: "!"
