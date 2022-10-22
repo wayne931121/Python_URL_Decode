@@ -1,6 +1,6 @@
 # Python_URL_Decode
 
-Python URL Decode
+Python Decode URL
 
 The function url_decoder in url_decoder.py
 
