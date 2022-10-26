@@ -5,7 +5,7 @@ Python URL Decoder
 The function url_decoder in url_decoder.py
 
 ```python
-from url_decode import url_decoder
+from url_decode import url_encoder, url_decoder
 
 url = "https://zh.wikipedia.org/zh-tw/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81"
 url = url_decoder(url)
