@@ -33,11 +33,8 @@ URL_RFC_3986 = {
 def url_encoder(b):
     # https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81
     if type(b)==bytes:
-        b = b.decode(encoding="utf-8") #byte can't insert utf8 charater
+        b = b.decode(encoding="utf-8") #byte can't insert many utf8 charaters
     result = bytearray() #bytearray: rw, bytes: read-only
-    enter_hex_unicode_mode = 0
-    hex_tmp = ""
-    now_index = 0
     for i in b:
         if i in URL_RFC_3986:
             for j in URL_RFC_3986[i]:
@@ -47,7 +44,6 @@ def url_encoder(b):
         if len(i)==1:
             result.append(ord(i))
         else:
-            k = 0
             for c in i:
                 c = hex(c)[2:].upper()
                 result.append(ord("%"))
