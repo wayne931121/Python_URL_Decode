@@ -63,7 +63,6 @@ def url_encoder(b):
         if len(i)==1:
             result.append(ord(i))
         else:
-            k = 0
             for c in i:
                 c = hex(c)[2:].upper()
                 result.append(ord("%"))
